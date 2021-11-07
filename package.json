@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "uni-clipboard",
+  "version": "1.0.0",
+  "description": "Universal Clipboard API",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepare": "git config --local core.hooksPath .githooks"
+  },
+  "author": "azu <azuciao@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.4.1"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  }
+}

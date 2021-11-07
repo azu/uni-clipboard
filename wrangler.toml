@@ -1,0 +1,11 @@
+name = "uni-clipboard"
+type = "javascript"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2021-11-07"
+kv_namespaces = [
+	 { binding = "UNI_CLIPBOARD", preview_id = "ef522697ab1f4c22b2479784e0c37efd", id = "7168072e248847c384c6076bb8ec4522" }
+]
