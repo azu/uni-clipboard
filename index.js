@@ -11,7 +11,15 @@ async function handleRequest(request) {
     }
     // Post
     if (request.method === "POST") {
-        const body = request.body;
+        const getBody = async () => {
+            const contentType = request.headers.get("content-type") || "";
+            if (contentType.includes("application/json")) {
+                const json = await request.json();
+                return json.value ?? json;
+            }
+            return request.text();
+        };
+        const body = await getBody();
         await UNI_CLIPBOARD.put("clipboard", body, { expirationTtl: 60 });
         return new Response("Post Clipboard", {
             headers: { "content-type": "text/plain; charset=utf-8" }
