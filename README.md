@@ -1,5 +1,7 @@
 # Uni Clipboard API
 
+Universal Clipboard API service on [Cloudflare Workers](https://workers.cloudflare.com/).
+
 - Create own clipboard API service
 - Simple GET/POST API
 - Delete data automatically. Default: 60 seconds
