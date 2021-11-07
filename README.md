@@ -43,6 +43,27 @@ Update clipboard
 await fetch("https://uni-clipboard.{your}.workers.dev/?token=XXX", { method: "post", body: "New Content"})
 ```
 
+## Client
+
+You can use [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) and [Alfred](https://www.alfredapp.com/) as client.
+
+
+For example, Alfred can use ShellScript.
+
+Push your clipboard to uni-clipboard.
+
+```shell
+c=$(pbpaste | /usr/local/bin/jq -aRs .)
+curl -X POST -H "Content-Type: application/json" -d "{\"value\":${c}}" \
+"https://uni-clipboard.{you}.workers.dev/?token={token}"
+```
+
+Read clipboard text from uni-clipboard
+
+```shll
+curl "https://uni-clipboard.{you}.workers.dev/?token={token}" | pbocpy
+```
+
 ## Development
 
     wranger dev
