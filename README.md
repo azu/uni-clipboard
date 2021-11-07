@@ -6,6 +6,13 @@
 
 ## Setup
 
+0. Fork this repository
+
+```
+git clone https://github.com/azu/uni-clipboard
+cd uni-clipboard
+```
+
 1. Create `UNI_CLIPBOARD` KV namespaces
 
 ```shell
