@@ -48,7 +48,7 @@ await fetch("https://uni-clipboard.{your}.workers.dev/?token=XXX", { method: "po
 You can use [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) and [Alfred](https://www.alfredapp.com/) as client.
 
 
-For example, Alfred can use ShellScript.
+For example, Alfred allow you to use ShellScript.
 
 Push your clipboard to uni-clipboard.
 
