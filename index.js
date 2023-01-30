@@ -4,6 +4,7 @@ addEventListener("fetch", (event) => {
 
 async function handleRequest(request) {
     const url = new URL(request.url);
+    const isRedirect = ur.searchParams.get("redirect") === "true";
     if (url.searchParams.get("token") !== UNI_TOKEN) {
         return new Response("Bad Token", {
             status: 404
@@ -27,9 +28,18 @@ async function handleRequest(request) {
     } else if (request.method === "GET") {
         // Get
         const clipboard = await UNI_CLIPBOARD.get("clipboard");
+        const isHTTP = clipboard?.startsWith("http");
         if (clipboard) {
+            if (isRedirect && isHTTP) {
+                return new Response(null, {
+                    status: 302,
+                    headers: {
+                        Location: `${clipboard}`,
+                    }
+                })
+            }
             return new Response(clipboard, {
-                headers: { "content-type": "text/plain; charset=utf-8" }
+                headers: { "content-type": "text/plain; charset=utf-8" },
             });
         } else {
             return new Response("Not Found", {
