@@ -17,9 +17,9 @@ Universal Clipboard API service on [Cloudflare Workers](https://workers.cloudfla
 On Web:
 
 1. Create Worker KV namespace from `https://dash.cloudflare.com/{yourid}/workers/kv/namespaces`
-    - ![img.png](kv.png)
+    - ![](docs/kv.png)
 2. Bind Created KV to `UNI_CLIPBOARD` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
-   - ![img.png](bind.png)
+   - ![](docs/bind.png)
 
 On Local:
 
@@ -32,7 +32,7 @@ npx wrangler kv:namespace create "UNI_CLIPBOARD"
 On Web:
 
 1. Input your access token to `UNI_TOKEN` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
-   - ![img.png](env.png)
+   - ![](docs/env.png)
 
 On Local:
 
