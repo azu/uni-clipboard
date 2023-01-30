@@ -43,6 +43,12 @@ Update clipboard
 await fetch("https://uni-clipboard.{your}.workers.dev/?token=XXX", { method: "post", body: "New Content"})
 ```
 
+Redirect to clipboard
+
+```
+https://uni-clipboard.{your}.workers.dev/?token=XXX&redirect=1
+```
+
 ## Client
 
 You can use [Shortcuts](https://apps.apple.com/us/app/shortcuts/id915249334) and [Alfred](https://www.alfredapp.com/) as client.
