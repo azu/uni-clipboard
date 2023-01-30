@@ -16,4 +16,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: publish index.js --compatibility-date 2023-01-30
+          command: publish index.js --name uni-clipboard --compatibility-date 2023-01-30
