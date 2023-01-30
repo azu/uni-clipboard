@@ -31,7 +31,7 @@ npx wrangler kv:namespace create "UNI_CLIPBOARD"
 
 On Web:
 
-1. Input your access token to `UNI_TOKEN`
+1. Input your access token to `UNI_TOKEN` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
    - ![img.png](env.png)
 
 On Local:
