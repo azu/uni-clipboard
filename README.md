@@ -20,8 +20,11 @@ On Web:
 
 1. Create Worker KV namespace from `https://dash.cloudflare.com/{yourid}/workers/kv/namespaces`
     - ![](docs/kv.png)
+    - Namespace Name: your favorite name
 2. Bind Created KV to `UNI_CLIPBOARD` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
    - ![](docs/bind.png)
+   - Variable Name: `UNI_CLIPBOARD`
+   - KV Namespace: Created KV namespace
 
 On Local:
 
@@ -35,6 +38,8 @@ On Web:
 
 1. Input your access token to `UNI_TOKEN` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
    - ![](docs/env.png)
+   - Variable name: `UNI_TOKEN`
+   - Value: your access token
 
 On Local:
 
