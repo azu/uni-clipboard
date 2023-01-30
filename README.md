@@ -1,10 +1,14 @@
-# Uni Clipboard API
+# Uni-Clipboard API
 
 Universal Clipboard API service on [Cloudflare Workers](https://workers.cloudflare.com/).
 
 - Create own clipboard API service
 - Simple GET/POST API
 - Delete data automatically. Default: 60 seconds
+
+## Deploy
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/azu/uni-clipboard)
 
 ## Setup
 
