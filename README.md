@@ -12,6 +12,8 @@ Universal Clipboard API service on [Cloudflare Workers](https://workers.cloudfla
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/azu/uni-clipboard)
 
+This button introduce Fork this repo and set GitHub Actions to deploy to Cloudflare Workers.
+
 ## 2. Bind `UNI_CLIPBOARD` to KV namespaces
 
 On Web:
