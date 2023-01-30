@@ -6,30 +6,38 @@ Universal Clipboard API service on [Cloudflare Workers](https://workers.cloudfla
 - Simple GET/POST API
 - Delete data automatically. Default: 60 seconds
 
-## Deploy
+## Setup
+
+### 1. Fork and Deploy to Cloudflare Workers
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/azu/uni-clipboard)
 
-## Setup
+## 2. Bind `UNI_CLIPBOARD` to KV namespaces
 
-0. Fork this repository
+On Web:
 
-```
-git clone https://github.com/azu/uni-clipboard
-cd uni-clipboard
-```
+1. Create Worker KV namespace from `https://dash.cloudflare.com/{yourid}/workers/kv/namespaces`
+    - ![img.png](kv.png)
+2. Bind Created KV to `UNI_CLIPBOARD` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
+   - ![img.png](img.png)
 
-1. Create `UNI_CLIPBOARD` KV namespaces
-
-```shell
-wrangler kv:namespace create "UNI_CLIPBOARD" --preview
-wrangler kv:namespace create "UNI_CLIPBOARD"
-```
-
-1. Put `UNI_TOKEN` for security
+On Local:
 
 ```shell
-$ wrangler secret put UNI_TOKEN
+npx wrangler kv:namespace create "UNI_CLIPBOARD"
+```
+
+### 3. Put `UNI_TOKEN` for your access token
+
+On Web:
+
+1. Input your access token to `UNI_TOKEN`
+   - ![img.png](img.png)
+
+On Local:
+
+```shell
+$ npx wrangler secret put UNI_TOKEN
 XXX
 ```
 
