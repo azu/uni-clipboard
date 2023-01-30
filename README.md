@@ -19,7 +19,7 @@ On Web:
 1. Create Worker KV namespace from `https://dash.cloudflare.com/{yourid}/workers/kv/namespaces`
     - ![img.png](kv.png)
 2. Bind Created KV to `UNI_CLIPBOARD` from `https://dash.cloudflare.com/{yourid}/workers/services/view/uni-clipboard/production/settings/bindings`
-   - ![img.png](img.png)
+   - ![img.png](bind.png)
 
 On Local:
 
@@ -32,7 +32,7 @@ npx wrangler kv:namespace create "UNI_CLIPBOARD"
 On Web:
 
 1. Input your access token to `UNI_TOKEN`
-   - ![img.png](img.png)
+   - ![img.png](env.png)
 
 On Local:
 
